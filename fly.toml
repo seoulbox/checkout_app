@@ -1,0 +1,24 @@
+# fly.toml app configuration file generated for seoulbox-checkout on 2023-11-15T10:54:18+05:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = "seoulbox-checkout"
+primary_region = "sin"
+
+[build]
+
+[env]
+  PORT = "8081"
+  SHOPIFY_APP_URL = "https://seoulbox-checkout.fly.dev"
+  SHOPIFY_API_KEY = "e412682a47af4f57f1879e6c6ca0eae9"
+  SCOPES = "write_products"
+
+
+[http_service]
+  internal_port = 8081
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ["app"]

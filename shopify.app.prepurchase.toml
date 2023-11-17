@@ -1,0 +1,28 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+name = "pre-purchase"
+client_id = "d9c3cd2fcf68701ee75922bc95e1718b"
+application_url = "https://refresh-vision-respectively-para.trycloudflare.com"
+embedded = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products"
+
+[auth]
+redirect_urls = [
+  "https://refresh-vision-respectively-para.trycloudflare.com/auth/callback",
+  "https://refresh-vision-respectively-para.trycloudflare.com/auth/shopify/callback",
+  "https://refresh-vision-respectively-para.trycloudflare.com/api/auth/callback",
+  "https://refresh-vision-respectively-para.trycloudflare.com/.shopify/graphiql/auth/callback"
+]
+
+[webhooks]
+api_version = "2023-10"
+
+[pos]
+embedded = false
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "extension-ui.myshopify.com"
